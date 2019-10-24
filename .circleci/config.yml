@@ -7,3 +7,9 @@ jobs:
       - run:
           name: "say hello"
           command: "echo hello"
+
+workflows:
+  version: 2
+  runTest:
+    jobs:
+      - test
