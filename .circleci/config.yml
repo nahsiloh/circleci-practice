@@ -2,14 +2,17 @@ version: 2
 jobs:
   test:
     docker:
-      - image: buildpack-deps:trusty
+      - image: node 12.13.0-alpine
     steps:
+      - checkout
       - run:
-          name: "say hello"
-          command: "echo hello"
+          name: "install package manager"
+          command: "npm install"
+      - run:
+          name: "run test"
+          command: "npm test"
 workflows:
   version: 2
   runTest:
     jobs:
-      - test
       - test
