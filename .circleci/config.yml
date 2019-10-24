@@ -1,8 +1,9 @@
 version: 2
 jobs:
-  test:
+  build:
     docker:
       - image: buildpack-deps:trusty
+    steps:
       - run:
           name: "say hello"
           command: "echo hello"
