@@ -3,6 +3,6 @@ jobs:
   test:
     docker:
       - image: buildpack-deps:trusty
-      -run:
-        name: "say hello"
-        command: "echo hello"
+      - run:
+          name: "say hello"
+          command: "echo hello"
